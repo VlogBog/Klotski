@@ -4,12 +4,13 @@
     { id: 'g',  x: 0, y: 0, w: 1, h: 2, c: '#1f9273' },
     { id: 'K',  x: 1, y: 0, w: 2, h: 2, big: true },
     { id: 'a',  x: 3, y: 0, w: 1, h: 2, c: '#c0831f' },
-    { id: 'p',  x: 0, y: 2, w: 2, h: 1, c: '#6f53bf' },
-    { id: 'b',  x: 2, y: 2, w: 2, h: 1, c: '#1b80b3' },
-    { id: 's1', x: 0, y: 3, w: 1, h: 1, c: '#bf4658' },
-    { id: 's2', x: 1, y: 3, w: 1, h: 1, c: '#1d9386' },
-    { id: 's3', x: 2, y: 3, w: 1, h: 1, c: '#c26829' },
-    { id: 's4', x: 3, y: 3, w: 1, h: 1, c: '#9d4bb8' },
+    { id: 'l2', x: 0, y: 2, w: 1, h: 2, c: '#1b80b3' },
+    { id: 's1', x: 1, y: 2, w: 1, h: 1, c: '#bf4658' },
+    { id: 's2', x: 2, y: 2, w: 1, h: 1, c: '#1d9386' },
+    { id: 'r2', x: 3, y: 2, w: 1, h: 2, c: '#6f53bf' },
+    { id: 's3', x: 1, y: 3, w: 1, h: 1, c: '#c26829' },
+    { id: 's4', x: 2, y: 3, w: 1, h: 1, c: '#9d4bb8' },
+    { id: 'p',  x: 1, y: 4, w: 2, h: 1, c: '#5b6a8c' },
   ];
   const WIN = { x: 1, y: 3 };
   const CROWN = '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l4 4 5-6 5 6 4-4-2 10H5z"/><path d="M5 21h14"/></svg>';
@@ -20,7 +21,7 @@
   let moves, history, startT, timerOn, finalT, won, raf;
 
   // ---------- storage ----------
-  const KEY = 'klotski-train-v1';
+  const KEY = 'klotski-train-v2';
   function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch { return {}; } }
   function save(d) { try { localStorage.setItem(KEY, JSON.stringify(d)); } catch {} }
   let rec = load();
